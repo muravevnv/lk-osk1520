@@ -21,6 +21,28 @@
                         <div class="welcome__head-title">Портал заявок на доставку ТМЦ</div>
                     </div>
                     <div class="welcome__main">
+                         <div class="reg js-reg-section">
+                            <div class="reg__title">Регистрация</div>
+                            <form action="#" class="reg__form">
+                                <input type="text" class="form-control" placeholder="Email" inputmode="text">
+                                <input type="text" class="form-control" id="phone-mask" placeholder="Телефон"
+                                    inputmode="text">
+                                <input type="text" class="form-control" placeholder="Название компании"
+                                    inputmode="text">
+                                <input type="text" class="form-control" placeholder="ИНН" inputmode="text">
+                                <input type="text" class="form-control" placeholder="Пароль" inputmode="text">
+                                <input type="text" class="form-control" placeholder="Подтверждение пароля"
+                                    inputmode="text">
+                                <button type="submit" class="btn btn--xl btn--wide">Зарегистрироваться</button>
+                                <div class="form-checkbox">
+                                    <input type="checkbox" name="" id="id_checkbox_condition">
+                                    <label for="id_checkbox_condition" class="form-checkbox__label">
+                                        <span class="form-checkbox__icon"></span>
+                                        <span class="form-checkbox__title">Согласен с условиями обработки персональных данных</span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
                         <div class="already-reg">
                             <div class="already-reg__title">
                                 Уже зарегистрированы ?
@@ -32,9 +54,9 @@
                                 </button>
                             </form>
                         </div>
-                        <div class="also-reg">
+                        <div class="also-reg js-reg-block">
                             <div class="also-reg__title">Еще не зарегистрированы ?</div>
-                            <a href="#" class="also-reg__btn btn btn--xl btn--wide">Регистрация</a>
+                            <button type="button" class="also-reg__btn btn btn--xl btn--wide js-reg-btn">Регистрация</button>
                         </div>
                     </div>
                     <div class="welcome__bottom">
@@ -45,5 +67,8 @@
             </div>
         </section>        
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/imask@7.6.1/dist/imask.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

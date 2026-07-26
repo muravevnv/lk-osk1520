@@ -1,4 +1,5 @@
-*, html {
+*,
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -71,12 +72,12 @@ input[type=checkbox] {
   font-family: Onest, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 12px;
   line-height: 120%;
-  color: #A6A6A6;
+  color: #a6a6a6;
   background-color: #e9ecef;
   z-index: 2;
 }
 .form-label--white {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .form-control {
@@ -106,6 +107,47 @@ input[type=checkbox] {
 
 textarea.form-control {
   height: 140px;
+}
+
+.form-checkbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.form-checkbox input:checked + .form-checkbox__label .form-checkbox__icon {
+  background-color: #ee3524;
+  border-color: #ee3524;
+}
+.form-checkbox input:checked + .form-checkbox__label .form-checkbox__icon::before {
+  opacity: 1;
+}
+.form-checkbox__icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #a6a6a6;
+}
+.form-checkbox__icon::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../images/check.svg") center center/24px no-repeat;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 1;
+}
+.form-checkbox__title {
+  padding-top: 4px;
+}
+.form-checkbox__label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .btn {
@@ -140,7 +182,7 @@ textarea.form-control {
           appearance: none;
   text-decoration: none;
   background: #ee3524;
-  color: #FFFFFF;
+  color: #ffffff;
   border: 1px solid #ee3524;
   transition: 0.25s ease-in-out;
 }
@@ -148,7 +190,7 @@ textarea.form-control {
   .btn:hover {
     background-color: #b3281b;
     border-color: #ee3524;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 .btn--wide {
@@ -173,7 +215,7 @@ textarea.form-control {
   .btn--border:hover {
     background-color: #ee3524;
     border-color: #ee3524;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
@@ -252,12 +294,13 @@ textarea.form-control {
   gap: 16px;
   padding: 24px;
   border-radius: 24px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .already-reg__title {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.2;
   font-weight: 600;
+  text-align: center;
 }
 .already-reg__form {
   width: 100%;
@@ -282,7 +325,7 @@ textarea.form-control {
   height: 40px;
 }
 .already-reg__btn svg path {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .also-reg {
@@ -292,12 +335,16 @@ textarea.form-control {
   gap: 16px;
   padding: 24px;
   border-radius: 24px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
+}
+.also-reg.is-hidden {
+  display: none;
 }
 .also-reg__title {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.2;
   font-weight: 600;
+  text-align: center;
 }
 
 .reg {
@@ -307,7 +354,11 @@ textarea.form-control {
   gap: 16px;
   padding: 24px;
   border-radius: 24px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
+  display: none;
+}
+.reg.is-visible {
+  display: flex;
 }
 .reg__title {
   font-size: 24px;
@@ -359,7 +410,7 @@ textarea.form-control {
   padding: 12px 16px;
   font-size: 20px;
   line-height: 1.25;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 12px;
   color: #27272b;
   border: none;
@@ -444,7 +495,7 @@ textarea.form-control {
 .orders__content {
   padding: 24px;
   border-radius: 24px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 @media screen and (max-width: 1023.98px) {
   .orders__content {
@@ -454,7 +505,7 @@ textarea.form-control {
 }
 
 .new-order__title {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.2;
   margin-bottom: 4px;
 }
@@ -520,7 +571,7 @@ textarea.form-control {
   line-height: 1.2;
   text-align: left;
   font-weight: 400;
-  color: #A6A6A6;
+  color: #a6a6a6;
   padding: 8px 12px;
 }
 @media screen and (max-width: 1023.98px) {
@@ -578,7 +629,7 @@ textarea.form-control {
   height: 40px;
   font-size: 16px;
   line-height: 1.2;
-  border: 1px solid #A6A6A6;
+  border: 1px solid #a6a6a6;
   text-align: center;
   border-radius: 8px;
   outline: none;
@@ -613,7 +664,7 @@ textarea.form-control {
   width: 24px;
   height: 24px;
   border-radius: 4px;
-  border: 1px solid #A6A6A6;
+  border: 1px solid #a6a6a6;
 }
 .specification__table-checkbox span::before {
   content: "";

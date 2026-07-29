@@ -40,24 +40,25 @@
         </div>
     </header>
     <div class="page">
-        <div class="orders">
+        <div class="orders" data-tabs>
             <div class="container">
                 <div class="orders__nav">
-                    <button type="button" class="orders__nav-btn is-selected">Новая заявка</button>
-                    <button type="button" class="orders__nav-btn">Мои заявки</button>
-                    <button type="button" class="orders__nav-btn">Справочная информация</button>
-                    <button type="button" class="orders__nav-btn">Контакты</button>
+                    <button type="button" class="orders__nav-btn is-selected" data-tabs-control="1">Новая
+                        заявка</button>
+                    <button type="button" class="orders__nav-btn" data-tabs-control="2">Мои заявки</button>
+                    <button type="button" class="orders__nav-btn" data-tabs-control="3">Справочная информация</button>
+                    <button type="button" class="orders__nav-btn" data-tabs-control="4">Контакты</button>
                 </div>
                 <div class="orders__content">
-                    <div class="orders__section">
+                    <div class="orders__section is-selected" data-tabs-panel="1">
                         <div class="new-order">
                             <div class="new-order__title">Выберите спецификацию и ТМЦ</div>
                             <div class="new-order__desc">
                                 В одной заявке можно выбрать ТМЦ из разных спецификаций.</div>
                         </div>
                         <div class="new-order__specifications">
-                            <div class="specification" data-accordion>
-                                <div class="specification__head" data-accordion-trigger>
+                            <div class="specification" data-accordion="">
+                                <div class="specification__head" data-accordion-trigger="" aria-expanded="false">
                                     <div class="specification__title">
                                         Спец 123456-78 от 01.01.2026
                                     </div>
@@ -75,7 +76,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="specification__body" data-accordion-content hidden>
+                                <div class="specification__body" data-accordion-content="" hidden="">
                                     <div class="specification__table">
                                         <table>
                                             <thead>
@@ -105,268 +106,374 @@
                                                         <label class="specification__table-checkbox">
                                                             <input type="checkbox" name="" id="">
                                                             <span></span>
+
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="specification__tablet-title">
+                                                            Кабель СГВ для МТЦ длинное название длинное название длинное
+                                                            название
+                                                            длинное название длинное название в одну или две строки
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="specification__table-amount">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="specification__table-input">
+                                                    </td>
+                                                    <td>
+                                                        <label class="specification__table-checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                            <span></span>
+
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="specification__tablet-title">
+                                                            Кабель СГВ для МТЦ длинное название длинное название длинное
+                                                            название
+                                                            длинное название длинное название в одну или две строки
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="specification__table-amount">
+                                                            1000 шт
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="specification__table-input">
+                                                    </td>
+                                                    <td>
+                                                        <label class="specification__table-checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                            <span></span>
+
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="specification__tablet-title">
-                                                Кабель СГВ для МТЦ длинное название длинное название длинное название
-                                                длинное название длинное название в одну или две строки
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="specification__table-amount">
-                                                0
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="specification__table-input">
-                                        </td>
-                                        <td>
-                                            <label class="specification__table-checkbox">
-                                                <input type="checkbox" name="" id="">
-                                                <span></span>
                                 </div>
-                                </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="specification__tablet-title">
-                                            Кабель СГВ для МТЦ длинное название длинное название длинное название
-                                            длинное название длинное название в одну или две строки
+                            </div>
+                            <div class="specification" data-accordion="">
+                                <div class="specification__head" data-accordion-trigger="" aria-expanded="false">
+                                    <div class="specification__title">
+                                        Спец 123456-78 от 01.01.2026
+                                    </div>
+                                    <div class="specification__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0"
+                                            y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512"
+                                            xml:space="preserve" class="hovered-paths">
+                                            <g>
+                                                <path
+                                                    d="M64 88a4 4 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A4 4 0 0 1 64 88"
+                                                    fill="#000000" opacity="1" data-original="#000000"
+                                                    class="hovered-path"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="specification__body" data-accordion-content="" hidden="">
+                                    <div class="specification__table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Название ТМЦ</th>
+                                                    <th>Кол-во итого</th>
+                                                    <th>Кол-во в отгрузке</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="specification__tablet-title">
+                                                            Кабель СГВ для МТЦ длинное название длинное название длинное
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="specification__table-amount">
+                                                            1000 шт
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="specification__table-input">
+                                                    </td>
+                                                    <td>
+                                                        <label class="specification__table-checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                            <span></span>
+
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="specification__tablet-title">
+                                                            Кабель СГВ для МТЦ длинное название длинное название длинное
+                                                            название длинное
+                                                            название длинное название в одну или две строки
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="specification__table-amount">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="specification__table-input">
+                                                    </td>
+                                                    <td>
+                                                        <label class="specification__table-checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                            <span></span>
+
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="specification__tablet-title">
+                                                            Кабель СГВ для МТЦ длинное название длинное название длинное
+                                                            название длинное название
+                                                            длинное название в одну или две строки
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="specification__table-amount">
+                                                            1000 шт
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="specification__table-input">
+                                                    </td>
+                                                    <td>
+                                                        <label class="specification__table-checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                            <span></span>
+
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="specification" data-accordion="">
+                                <div class="specification__head" data-accordion-trigger="" aria-expanded="false">
+                                    <div class="specification__title">
+                                        Спец 123456-78 от 01.01.2026
+                                    </div>
+                                    <div class="specification__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0"
+                                            y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512"
+                                            xml:space="preserve" class="hovered-paths">
+                                            <g>
+                                                <path
+                                                    d="M64 88a4 4 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A4 4 0 0 1 64 88"
+                                                    fill="#000000" opacity="1" data-original="#000000"
+                                                    class="hovered-path"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="specification__body" data-accordion-content="" hidden="">
+                                    <div class="specification__table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Название ТМЦ</th>
+                                                    <th>Кол-во итого</th>
+                                                    <th>Кол-во в отгрузке</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="specification__tablet-title">
+                                                            Кабель СГВ для МТЦ длинное название длинное название длинное
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="specification__table-amount">
+                                                            1000 шт
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="specification__table-input">
+                                                    </td>
+                                                    <td>
+                                                        <label class="specification__table-checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                            <span></span>
+
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="specification__tablet-title">
+                                                            Кабель СГВ для МТЦ длинное название длинное название длинное
+                                                            название длинное название длинное
+                                                            название в одну или две строки
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="specification__table-amount">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="specification__table-input">
+                                                    </td>
+                                                    <td>
+                                                        <label class="specification__table-checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                            <span></span>
+
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="specification__tablet-title">
+                                                            Кабель СГВ для МТЦ длинное название длинное название длинное
+                                                            название длинное название длинное
+                                                            название в одну или две строки
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="specification__table-amount">
+                                                            1000 шт
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="specification__table-input">
+                                                    </td>
+                                                    <td>
+                                                        <label class="specification__table-checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                            <span></span>
+
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="new-order__bottom">
+                            <a href="#" class="btn btn--xl">Далее</a>
+                        </div>
+                    </div>
+                    <div class="orders__section" data-tabs-panel="2">
+                        <div class="my-orders">
+                            <div class="my-orders__list">
+                                <div class="my-orders__item">
+                                    <div class="my-orders__item-info">
+                                        <div class="my-orders__item-date">21 авг 2026</div>
+                                        <div class="my-orders__item-time">14:00 - 14:30</div>
+                                    </div>
+                                    <div class="my-orders__item-doc">
+                                        <div class="my-orders__item-doc-name">
+                                            Спец. №12345678-0
                                         </div>
-                                    </td>
-                                    <td>
-                                        <div class="specification__table-amount">
-                                            1000 шт
+                                        <div class="my-orders__item-doc-date">
+                                            от 01.07.2026
                                         </div>
-                                    </td>
-                                    <td>
-                                        <input type="text" class="specification__table-input">
-                                    </td>
-                                    <td>
-                                        <label class="specification__table-checkbox">
-                                            <input type="checkbox" name="" id="">
-                                            <span></span>
-                            </div>
-                            </td>
-                            </tr>
-                            </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="specification" data-accordion>
-                    <div class="specification__head" data-accordion-trigger>
-                        <div class="specification__title">
-                            Спец 123456-78 от 01.01.2026
-                        </div>
-                        <div class="specification__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
-                                viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve"
-                                class="hovered-paths">
-                                <g>
-                                    <path
-                                        d="M64 88a4 4 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A4 4 0 0 1 64 88"
-                                        fill="#000000" opacity="1" data-original="#000000" class="hovered-path"></path>
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="specification__body" data-accordion-content hidden>
-                        <div class="specification__table">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Название ТМЦ</th>
-                                        <th>Кол-во итого</th>
-                                        <th>Кол-во в отгрузке</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="specification__tablet-title">
-                                                Кабель СГВ для МТЦ длинное название длинное название длинное
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="specification__table-amount">
-                                                1000 шт
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="specification__table-input">
-                                        </td>
-                                        <td>
-                                            <label class="specification__table-checkbox">
-                                                <input type="checkbox" name="" id="">
-                                                <span></span>
-                        </div>
-                        </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="specification__tablet-title">
-                                    Кабель СГВ для МТЦ длинное название длинное название длинное название длинное
-                                    название длинное название в одну или две строки
+                                    </div>
+                                    <button type="button" class="my-orders__item-edit-btn reset-btn">
+                                        <span>Изменить</span>
+                                    </button>
+                                    <button type="button" class="my-orders__item-remove-btn reset-btn">
+                                        <span>Удалить</span>
+                                    </button>
                                 </div>
-                            </td>
-                            <td>
-                                <div class="specification__table-amount">
-                                    0
+                                <div class="my-orders__item">
+                                    <div class="my-orders__item-info">
+                                        <div class="my-orders__item-date">21 авг 2026</div>
+                                        <div class="my-orders__item-time">14:00 - 14:30</div>
+                                    </div>
+                                    <div class="my-orders__item-doc">
+                                        <div class="my-orders__item-doc-name">
+                                            Спец. №12345678-0
+                                        </div>
+                                        <div class="my-orders__item-doc-date">
+                                            от 01.07.2026
+                                        </div>
+                                    </div>
+                                    <button type="button" class="my-orders__item-edit-btn reset-btn">
+                                        <span>Изменить</span>
+                                    </button>
+                                    <button type="button" class="my-orders__item-remove-btn reset-btn">
+                                        <span>Удалить</span>
+                                    </button>
                                 </div>
-                            </td>
-                            <td>
-                                <input type="text" class="specification__table-input">
-                            </td>
-                            <td>
-                                <label class="specification__table-checkbox">
-                                    <input type="checkbox" name="" id="">
-                                    <span></span>
+                                <div class="my-orders__item">
+                                    <div class="my-orders__item-info">
+                                        <div class="my-orders__item-date">21 авг 2026</div>
+                                        <div class="my-orders__item-time">14:00 - 14:30</div>
+                                    </div>
+                                    <div class="my-orders__item-doc">
+                                        <div class="my-orders__item-doc-name">
+                                            Спец. №12345678-0
+                                        </div>
+                                        <div class="my-orders__item-doc-date">
+                                            от 01.07.2026
+                                        </div>
+                                    </div>
+                                    <button type="button" class="my-orders__item-edit-btn reset-btn">
+                                        <span>Изменить</span>
+                                    </button>
+                                    <button type="button" class="my-orders__item-remove-btn reset-btn">
+                                        <span>Удалить</span>
+                                    </button>
+                                </div>
+                                <div class="my-orders__item">
+                                    <div class="my-orders__item-info">
+                                        <div class="my-orders__item-date">21 авг 2026</div>
+                                        <div class="my-orders__item-time">14:00 - 14:30</div>
+                                    </div>
+                                    <div class="my-orders__item-doc">
+                                        <div class="my-orders__item-doc-name">
+                                            Спец. №12345678-0
+                                        </div>
+                                        <div class="my-orders__item-doc-date">
+                                            от 01.07.2026
+                                        </div>
+                                    </div>
+                                    <button type="button" class="my-orders__item-edit-btn reset-btn">
+                                        <span>Изменить</span>
+                                    </button>
+                                    <button type="button" class="my-orders__item-remove-btn reset-btn">
+                                        <span>Удалить</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="specification__tablet-title">
-                                Кабель СГВ для МТЦ длинное название длинное название длинное название длинное название
-                                длинное название в одну или две строки
-                            </div>
-                        </td>
-                        <td>
-                            <div class="specification__table-amount">
-                                1000 шт
-                            </div>
-                        </td>
-                        <td>
-                            <input type="text" class="specification__table-input">
-                        </td>
-                        <td>
-                            <label class="specification__table-checkbox">
-                                <input type="checkbox" name="" id="">
-                                <span></span>
+                    <div class="orders__section" data-tabs-panel="3"></div>
+                    <div class="orders__section" data-tabs-panel="4"></div>
                 </div>
-                </td>
-                </tr>
-                </tbody>
-                </table>
             </div>
         </div>
-    </div>
-    <div class="specification" data-accordion>
-        <div class="specification__head" data-accordion-trigger>
-            <div class="specification__title">
-                Спец 123456-78 от 01.01.2026
-            </div>
-            <div class="specification__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    width="512" height="512" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512"
-                    xml:space="preserve" class="hovered-paths">
-                    <g>
-                        <path
-                            d="M64 88a4 4 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A4 4 0 0 1 64 88"
-                            fill="#000000" opacity="1" data-original="#000000" class="hovered-path"></path>
-                    </g>
-                </svg>
-            </div>
-        </div>
-        <div class="specification__body" data-accordion-content hidden>
-            <div class="specification__table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Название ТМЦ</th>
-                            <th>Кол-во итого</th>
-                            <th>Кол-во в отгрузке</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="specification__tablet-title">
-                                    Кабель СГВ для МТЦ длинное название длинное название длинное
-                                </div>
-                            </td>
-                            <td>
-                                <div class="specification__table-amount">
-                                    1000 шт
-                                </div>
-                            </td>
-                            <td>
-                                <input type="text" class="specification__table-input">
-                            </td>
-                            <td>
-                                <label class="specification__table-checkbox">
-                                    <input type="checkbox" name="" id="">
-                                    <span></span>
-            </div>
-            </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="specification__tablet-title">
-                        Кабель СГВ для МТЦ длинное название длинное название длинное название длинное название длинное
-                        название в одну или две строки
-                    </div>
-                </td>
-                <td>
-                    <div class="specification__table-amount">
-                        0
-                    </div>
-                </td>
-                <td>
-                    <input type="text" class="specification__table-input">
-                </td>
-                <td>
-                    <label class="specification__table-checkbox">
-                        <input type="checkbox" name="" id="">
-                        <span></span>
-        </div>
-        </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="specification__tablet-title">
-                    Кабель СГВ для МТЦ длинное название длинное название длинное название длинное название длинное
-                    название в одну или две строки
-                </div>
-            </td>
-            <td>
-                <div class="specification__table-amount">
-                    1000 шт
-                </div>
-            </td>
-            <td>
-                <input type="text" class="specification__table-input">
-            </td>
-            <td>
-                <label class="specification__table-checkbox">
-                    <input type="checkbox" name="" id="">
-                    <span></span>
-    </div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </div>
     </div>
 
-    </div>
-    <div class="new-order__bottom">
-        <a href="#" class="btn btn--xl">Далее</a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/imask@7.6.1/dist/imask.min.js"></script>
     <script src="js/main.js"></script>
 </body>

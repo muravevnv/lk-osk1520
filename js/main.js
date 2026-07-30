@@ -88,4 +88,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         )
     }
+
+    const alreadyRegNextBtn = document.querySelector('.js-already-reg-next');
+    const alreadyNextSections = document.querySelectorAll('.js-already-reg-section');
+
+    if (alreadyNextSections.length > 0 || alreadyRegNextBtn) {
+        alreadyRegNextBtn.addEventListener('click', () => {
+            alreadyNextSections.forEach((section) => {
+                section.classList.remove('is-active');
+                if (section.dataset.block === 'password') {
+                    section.classList.add('is-active');
+                }
+            });
+        })
+    }
+
+    const password = document.querySelector('.js-password-input');
+    const passwordVisibilityBtn = document.querySelector('.js-password-visibility-btn')
+
+    if (password) {
+        passwordVisibilityBtn.addEventListener('click', () => {
+            if (password.type === "password") {
+                password.type = "text";
+                passwordVisibilityBtn.classList.add('is-hidden');
+            } else {
+                password.type = "password";
+                passwordVisibilityBtn.classList.remove('is-hidden');
+            }
+        })
+    }
+
 })

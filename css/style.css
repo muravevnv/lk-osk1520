@@ -183,7 +183,7 @@ textarea.form-control {
   display: inline-flex;
   overflow: hidden;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   justify-content: center;
   padding: 13px 23px;
   font-size: 14px;
@@ -306,12 +306,41 @@ textarea.form-control {
 
 .already-reg {
   width: 100%;
+}
+.already-reg__section {
+  width: 100%;
+  display: none;
+}
+.already-reg__section.is-active {
+  display: block;
+}
+.already-reg__block {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 24px;
   border-radius: 24px;
   background-color: #ffffff;
+}
+.already-reg__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+.already-reg__tip {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #5c5c5c;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+@media (any-hover: hover) {
+  .already-reg__tip:hover {
+    border-color: currentColor;
+  }
 }
 .already-reg__title {
   font-size: 24px;
@@ -343,6 +372,24 @@ textarea.form-control {
 }
 .already-reg__btn svg path {
   fill: #ffffff;
+}
+.already-reg__password {
+  position: relative;
+}
+.already-reg__password-input {
+  padding-right: 150px;
+}
+.already-reg__password-visibility {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 16px;
+  right: 100px;
+  background: url("../images/eye.svg") center center/32px no-repeat;
+  z-index: 2;
+}
+.already-reg__password-visibility.is-hidden {
+  background-image: url("../images/eye-stroke.svg");
 }
 
 .also-reg {
@@ -850,6 +897,8 @@ textarea.form-control {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .order {
@@ -919,6 +968,8 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 767.98px) {
   .order__bottom {

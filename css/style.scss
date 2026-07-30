@@ -208,7 +208,7 @@ textarea.form-control {
   display: inline-flex;
   overflow: hidden;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   justify-content: center;
   padding: 13px 23px;
   font-size: 14px;
@@ -335,12 +335,48 @@ textarea.form-control {
 
 .already-reg {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px;
-  border-radius: 24px;
-  background-color: #ffffff;
+
+  &__section {
+    width: 100%;
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #ffffff;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  &__tip {
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #5c5c5c;
+    text-align: center;
+
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: currentColor;
+      }
+    }
+  }
 
   &__title {
     font-size: 24px;
@@ -374,6 +410,28 @@ textarea.form-control {
 
       path {
         fill: #ffffff;
+      }
+    }
+  }
+
+  &__password {
+    position: relative;
+
+    &-input {
+      padding-right: 150px;
+    }
+
+    &-visibility {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 16px;
+      right: 100px;
+      background: url('../images/eye.svg') center center / 32px no-repeat;
+      z-index: 2;
+
+      &.is-hidden {
+        background-image: url('../images/eye-stroke.svg');
       }
     }
   }
@@ -926,6 +984,8 @@ textarea.form-control {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
   }
 }
 
@@ -1004,6 +1064,8 @@ textarea.form-control {
     align-items: center;
     justify-content: center;
     margin-top: 40px;
+    gap: 12px;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 767.98px) {
       margin-top: 24px;

@@ -90,19 +90,35 @@ input[type="checkbox"] {
   }
 }
 
+.form-float-label {
+  display: block;
+  padding: 0 4px;
+  position: absolute;
+  left: 16px;
+  top: 28px;
+  font-family: $font-family-base;
+  font-size: 24px;
+  line-height: 120%;
+  color: #a6a6a6;
+  background-color: #ffffff;
+  z-index: 2;
+  transition: 0.25s ease-in-out;
+  pointer-events: none;
+}
+
 .form-control {
   display: block;
   width: 100%;
   padding: 23px;
-  font: 400 #{18px}/ 1.3 $font-family-base;
+  font: 400 #{24px}/ 1.3 $font-family-base;
   color: #27272b;
   background-color: transparent;
   border: 1px solid #a6a6a6;
-  border-radius: 12px;
   transition: border-color ease-in-out 0.15s;
   -webkit-appearance: none;
   outline: none;
   user-select: none;
+  border-radius: 12px;
 
   &::-ms-expand {
     background-color: transparent;
@@ -114,6 +130,12 @@ input[type="checkbox"] {
     background-color: #e9ecef;
     opacity: 1;
   }
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+  transform: translateY(-32px);
+  font-size: 14px;
 }
 
 textarea.form-control {

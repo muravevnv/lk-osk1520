@@ -80,21 +80,37 @@ input[type=checkbox] {
   background-color: #ffffff;
 }
 
+.form-float-label {
+  display: block;
+  padding: 0 4px;
+  position: absolute;
+  left: 16px;
+  top: 28px;
+  font-family: Onest, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 24px;
+  line-height: 120%;
+  color: #a6a6a6;
+  background-color: #ffffff;
+  z-index: 2;
+  transition: 0.25s ease-in-out;
+  pointer-events: none;
+}
+
 .form-control {
   display: block;
   width: 100%;
   padding: 23px;
-  font: 400 18px/1.3 Onest, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 400 24px/1.3 Onest, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #27272b;
   background-color: transparent;
   border: 1px solid #a6a6a6;
-  border-radius: 12px;
   transition: border-color ease-in-out 0.15s;
   -webkit-appearance: none;
   outline: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  border-radius: 12px;
 }
 .form-control::-ms-expand {
   background-color: transparent;
@@ -103,6 +119,17 @@ input[type=checkbox] {
 .form-control:disabled, .form-control[readonly] {
   background-color: #e9ecef;
   opacity: 1;
+}
+
+.form-control:not(:-moz-placeholder) + label {
+  transform: translateY(-32px);
+  font-size: 14px;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+  transform: translateY(-32px);
+  font-size: 14px;
 }
 
 textarea.form-control {
@@ -1029,7 +1056,9 @@ textarea.form-control {
 }
 .order-datepicker__calendar {
   border-radius: 10px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .order-datepicker__slots {
   display: flex;
@@ -1177,10 +1206,7 @@ textarea.form-control {
 .calendar__day--empty {
   visibility: hidden;
 }
-.calendar__day--free,
-.calendar__day--load,
-.calendar__day--busy,
-.calendar__day--off {
+.calendar__day--free, .calendar__day--load, .calendar__day--busy, .calendar__day--off {
   color: #ffffff;
 }
 .calendar__day--free {
@@ -1205,8 +1231,7 @@ textarea.form-control {
   box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #ee3524;
 }
 @media (any-hover: hover) {
-  .calendar__day--free:hover,
-  .calendar__day--load:hover {
+  .calendar__day--free:hover, .calendar__day--load:hover {
     filter: brightness(1.08);
   }
 }
